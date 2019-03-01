@@ -12,4 +12,11 @@
         <constructor-arg value="Earth"/>
     </bean>
 
+    <bean id="knight" class="kingdom.earth.KnightImpl">
+        <constructor-arg index="0" value="Arthur"/>
+        <constructor-arg index="1" ref="kingdom"/>
+    </bean>
+
+    <bean id="people" class="kingdom.earth.People"/>
+
 </beans>
