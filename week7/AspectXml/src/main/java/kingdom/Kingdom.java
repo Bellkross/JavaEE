@@ -1,7 +1,10 @@
 package kingdom;
 
+import java.util.List;
+
 public interface Kingdom {
 
-    void showPlanetNames();
-
+    List<String> getPlanetNames();
+    String getName();
+    void setName(final String name);
 }

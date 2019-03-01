@@ -4,7 +4,8 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     
     <bean id="kingdom" class="kingdom.earth.EarthKingdom">
-        <constructor-arg index="0" ref="planet"/>
+        <constructor-arg index="0" value="High Kingdom"/>
+        <constructor-arg index="1" ref="planet"/>
     </bean>
 
     <bean id="planet" class="kingdom.earth.Earth">
