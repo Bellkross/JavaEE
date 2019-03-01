@@ -1,14 +1,16 @@
 package kingdom.earth;
 
 import kingdom.Knight;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class People {
 
-    public static void sayGoodLuck(Knight knight) {
-        System.out.println(String.format("Good luck, %s!", knight.getName()));
+    public static void sayGoodLuck() {
+        System.out.println("Good luck, knight!");
     }
 
-    public static void sayThankYou(Knight knight) {
-        System.out.println(String.format("Thank you, %s!", knight.getName()));
+    @Autowired
+    public static void sayThankYou() {
+        System.out.println("Thank you, knight!");
     }
 }

@@ -1,8 +1,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-    
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="knight" class="kingdom.earth.KnightImpl">
+        <constructor-arg index="0" value="Arthur"/>
+        <constructor-arg index="1" ref="kingdom"/>
+    </bean>
+
     <bean id="kingdom" class="kingdom.earth.EarthKingdom">
         <constructor-arg index="0" value="High Kingdom"/>
         <constructor-arg index="1" ref="planet"/>
@@ -12,11 +17,19 @@
         <constructor-arg value="Earth"/>
     </bean>
 
-    <bean id="knight" class="kingdom.earth.KnightImpl">
-        <constructor-arg index="0" value="Arthur"/>
-        <constructor-arg index="1" ref="kingdom"/>
-    </bean>
-
     <bean id="people" class="kingdom.earth.People"/>
+
+    <aop:config>
+        <aop:aspect ref="people">
+            <aop:before
+                    pointcut="execution(*
+                    kingdom.Knight.saveKingdom())"
+                    method="sayGoodLuck"/>
+            <aop:after
+                    pointcut="execution(*
+                    kingdom.Knight.saveKingdom())"
+                    method="sayThankYou"/>
+        </aop:aspect>
+    </aop:config>
 
 </beans>
