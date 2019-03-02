@@ -30,6 +30,7 @@
             </props>
         </property>
     </bean>
+    <bean id="teachersWorker" class="worker.WorkWithTeacher"/>
 
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
     <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
