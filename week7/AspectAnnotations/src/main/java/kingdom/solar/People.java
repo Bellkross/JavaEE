@@ -4,13 +4,11 @@ import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @Aspect
+@Component
 public class People {
-
-    @Pointcut("execution(* kingdom.Knight.saveKingdom(..))")
-    public void kingdomSaving() {}
 
     @Before("kingdomSaving()")
     public static void sayGoodLuck() {
@@ -19,6 +17,10 @@ public class People {
 
     @After("kingdomSaving()")
     public static void sayThankYou() {
-        System.out.println("People: Thank you, knight!");
+        System.out.println("Thank you, knight!");
+    }
+
+    @Pointcut("execution(* kingdom.Knight.saveKingdom())")
+    public void kingdomSaving() {
     }
 }
