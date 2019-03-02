@@ -19,4 +19,9 @@ public class AppConfig {
         return planets;
     }
 
+    @Bean
+    String getSolarKingdomName() {
+        return "Solar Star";
+    }
+
 }
