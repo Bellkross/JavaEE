@@ -9,7 +9,6 @@ public class People {
         System.out.println("Good luck, knight!");
     }
 
-    @Autowired
     public static void sayThankYou() {
         System.out.println("Thank you, knight!");
     }
