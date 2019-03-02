@@ -9,7 +9,7 @@
           xmlns:context="http://www.springframework.org/schema/context"
           xmlns:tx="http://www.springframework.org/schema/tx">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/testJDBC"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/testjdbc"/>
         <property name="username" value="root"/>
         <property name="password" value="root"/>
         <property name="initialSize" value="5"/>
