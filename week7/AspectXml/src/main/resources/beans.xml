@@ -21,13 +21,13 @@
 
     <aop:config>
         <aop:aspect ref="people">
+            <aop:pointcut id="kingdomSaving" expression="execution(*
+                    kingdom.Knight.saveKingdom())"/>
             <aop:before
-                    pointcut="execution(*
-                    kingdom.Knight.saveKingdom())"
+                    pointcut-ref="kingdomSaving"
                     method="sayGoodLuck"/>
             <aop:after
-                    pointcut="execution(*
-                    kingdom.Knight.saveKingdom())"
+                    pointcut-ref="kingdomSaving"
                     method="sayThankYou"/>
         </aop:aspect>
     </aop:config>
