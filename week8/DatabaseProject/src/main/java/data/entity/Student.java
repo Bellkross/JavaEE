@@ -1,12 +1,15 @@
-package entity;
+package data.entity;
 
 public class Student {
     private int id;
     private String pib;
     private int course;
 
-    public Student(final int id, final String pib, final int course) {
-        this.id = id;
+    public Student() {
+    }
+
+
+    public Student(final String pib, final int course) {
         this.pib = pib;
         this.course = course;
     }
