@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class HibernateTeacherDao implements TeachersDao {
 
+    @Autowired
     private SessionFactory sessionFactory;
 
     private Session currentSession() {
