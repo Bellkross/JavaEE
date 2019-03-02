@@ -15,7 +15,6 @@ public class SolarKnight implements Knight {
         this("Arthur", kingdom);
     }
 
-
     public SolarKnight(final String name, final Kingdom kingdom) {
         this.name = name;
         this.kingdom = kingdom;
