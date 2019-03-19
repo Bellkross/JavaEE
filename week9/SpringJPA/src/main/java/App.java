@@ -10,7 +10,7 @@ public class App{
         lecture.setName("Introduction to Spring");
         lecture.setCredits(2.5);
         LecturesWorker worker = (LecturesWorker)context.getBean("worker");
-        worker.addLecture(lecture);
+        System.out.println(worker.addLecture(lecture).toString());
     }
 }
 

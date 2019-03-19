@@ -3,7 +3,7 @@ package practice5JPA.data;
 import javax.persistence.*;
 
 @Entity
-@Table(name="Lectures")
+@Table(name="lectures")
 public class Lecture {
 
     @Id
@@ -35,5 +35,14 @@ public class Lecture {
 
     public void setCredits(final double credits) {
         this.credits = credits;
+    }
+
+    @Override
+    public String toString() {
+        return "Lecture{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", credits=" + credits +
+                '}';
     }
 }
