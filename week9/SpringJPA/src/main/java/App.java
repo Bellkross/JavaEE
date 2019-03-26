@@ -6,11 +6,11 @@ import practice5JPA.data.LecturesWorker;
 public class App{
     public static void main( String[] args ) {
         ApplicationContext context = new ClassPathXmlApplicationContext("SpringBeans.xml");
-        Lecture lecture = new Lecture();
-        lecture.setName("Introduction to Spring");
-        lecture.setCredits(2.5);
         LecturesWorker worker = (LecturesWorker)context.getBean("worker");
-        System.out.println(worker.addLecture(lecture).toString());
+        worker.getLectureById(1);
+        worker.getLectureById(1);
+        worker.getAllLectures();
+        worker.getAllLectures();
     }
 }
 
