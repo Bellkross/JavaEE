@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.List;
 
 @Repository
@@ -26,7 +27,11 @@ public class LecturesDaoJPAImpl implements LecturesDao{
 
     @Cacheable("lecturesCache")
     public Lecture getLecture(int id) {
-        return em.find(Lecture.class,id);
+        Query query1 = em.createQuery(
+                "select l from Lecture l " +
+                        "where l.id=" + id, Lecture.class);
+
+        return (Lecture) query1.getSingleResult();
     }
 
     public void saveLecture(Lecture lecture) {
