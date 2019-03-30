@@ -25,7 +25,7 @@ public class HibernateTeacherDao implements TeachersDao {
         return (Teacher) currentSession().get(Teacher.class, id);
     }
 
-    public void saveTacher(Teacher teacher) {
+    public void saveTeacher(Teacher teacher) {
         currentSession().update(teacher);
     }
 }

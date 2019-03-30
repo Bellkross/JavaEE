@@ -1,8 +1,19 @@
 package data.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="STUDENTS")
 public class Student {
+
+    @Id
+    @GeneratedValue
     private int id;
+
+    @Column(name="pib")
     private String pib;
+
+    @Column(name="course")
     private int course;
 
     public Student() {

@@ -18,7 +18,7 @@ public class WorkWithTeacher {
         return teachersDao.getTeacherById(id);
     }
     public void saveTacher(Teacher teacher){
-        teachersDao.saveTacher(teacher);
+        teachersDao.saveTeacher(teacher);
         System.out.println("Teacher has been saved "+teacher);
     }
 }
