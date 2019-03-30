@@ -22,7 +22,7 @@ public class App{
         teacher.setCellphone("+380675097865");
         teacher = workWithTeacher.addTeacher(teacher);
         teacher.setBirthDate(new Date());
-        workWithTeacher.saveTacher(teacher);
+        workWithTeacher.saveTeacher(teacher);
 
     }
 }
