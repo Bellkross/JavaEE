@@ -15,7 +15,7 @@ public class WorkWithStudents {
     @Autowired
     private TransactionTemplate transactionTemplate;
 
-    public void saveStudentToDb(final Student student){
+    public void saveStudentToDb(final Student student) {
         transactionTemplate.execute(new TransactionCallback<Void>() {
                                         public Void doInTransaction(final TransactionStatus transactionStatus) {
                                             try {
